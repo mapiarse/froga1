@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: sans-serif;
+    line-height: 1.5;
+    
+}
+
+.basic {
+    
+    display: grid;
+    grid-template-rows: 4rem minmax(calc(100vh - 8rem), max-content) 4rem;
+    /*el medio ocupa todo menos lo de arriba los gaps y lo de abajo 10 rem*/
+ 
+   
+    grid-template-areas:
+        "header header header header"
+       "section section section section"
+        "footer footer footer footer";
+}
+
+.basic header {
+    grid-area: header;
+    background: lightslategray; 
+    font-size: 2rem;
+    text-align: center;
+}
+.basic section{
+     grid-area: section;
+      background-image: url("../img/pelis2012.jpg");
+      display: grid;
+      grid-template-columns: minmax(5%, 1fr) 1fr 3fr minmax(5%, 1fr);
+       grid-template-areas:    ".      nav    main   .     " ;
+}
+
+
+.basic nav {
+    grid-area: nav;
+     background-color:  #cfcfcf;}
+.basic nav h3{
+    text-align: center;
+}
+.basic nav ol{
+    list-style: none;
+    
+}
+.basic nav li{
+    margin: 15px;
+text-decoration:none;
+font-weight: 600;
+font-size: 20px;
+color:#000000;
+padding-top:15px;
+padding-bottom:15px;
+padding-left:40px;
+padding-right:40px;
+background-color: transparent;
+border-width: 3px;
+border-style: solid;
+border-color: #000000;
+}
+
+.basic nav a{
+    text-decoration: none;
+    font-size:  large;
+    
+   
+}
+.basic .main {
+    grid-area: main;
+     background-color:  #1f6377;
+    
+}
+.basic footer {
+    grid-area: footer;
+    background: lightslategray; 
+}
+.basic .main img{
+    width: 100%;
+    height:50%;
+}
+
